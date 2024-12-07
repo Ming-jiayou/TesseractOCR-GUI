@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using TesseractOCR_GUI.Views;
+using Prism.Ioc;
+using Prism.Unity;
 
 namespace TesseractOCR_GUI
 {

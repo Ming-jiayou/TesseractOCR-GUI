@@ -1,62 +1,62 @@
-[简体中文](./README.zh.md) | English
+简体中文|[English](./README.md) 
 
 # TesseractOCR-GUI
 
-## A Simple User Interface for Tesseract OCR Based on WPF/C#.
+## 基于WPF/C#构建的TesseractOCR简单易用的用户界面✨
 
-## Screen Captures
+## 屏幕截图✨
 
 ![image-20241207112935860](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20241207112935860.png)
 
 ![image-20241207113004039](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20241207113004039.png)
 
-## General user usage✨
+## 普通用户使用✨
 
-The previous article [Using Tesseract for Image Text Recognition](https://mp.weixin.qq.com/s/C2o0-RtubtQb4pzys2wx6w) introduced how to install TesseractOCR and use it via the command line. However, using the command line in daily tasks can be inconvenient. Therefore, today we will introduce how to create a simple and user-friendly interface for TesseractOCR using WPF/C#.
+前篇文章[使用Tesseract进行图片文字识别](https://mp.weixin.qq.com/s/C2o0-RtubtQb4pzys2wx6w)介绍了如何安装TesseractOCR与TesseractOCR的命令行使用。但在日常使用过程中，命令行使用还是不太方便的，因此今天介绍一下如何使用WPF/C#构建TesseractOCR简单易用的用户界面。
 
-Following the previous tutorial, after installing TesseractOCR locally, download from the GitHub Releases page.
+参照上一篇教程，在本地安装好TesseractOCR之后，在GitHub的Release页面进行下载。
 
-GitHub address: https://github.com/Ming-jiayou/TesseractOCR-GUI
+GitHub地址：https://github.com/Ming-jiayou/TesseractOCR-GUI
 
 ![image-20241207134914277](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20241207134914277.png)
 
-It is recommended to choose the compressed package with dependencies, as it is relatively smaller in size:
+推荐选择依赖框架的压缩包，体积比较小：
 
 ![image-20241207135004215](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20241207135004215.png)
 
-Unzip as shown below:
+解压如下所示：
 
 ![image-20241207135159013](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20241207135159013.png)
 
-Double-click to open and use it. If it shows that you do not have the framework installed, click the link, download and install the framework, then you can open and use it.
+双击打开即可使用，如果显示你没有安装框架，点击链接，下载安装一下框架，即可打开使用。
 
-Chinese recognition:
+识别中文：
 
 ![image-20241207135447692](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20241207135447692.png)
 
-English recognition:
+识别英文：
 
 ![image-20241207135519142](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20241207135519142.png)
 
-It is very simple and convenient to use.
+使用非常简单方便。
 
-## WPF/C# programmers usage✨
+## WPF/C#程序员使用✨
 
-After a brief investigation, it was found that building a TesseractOCR-GUI can primarily be achieved in two ways. One way is to encapsulate the use of the command line, while the other is to encapsulate the TesseractOCR C++ API.
+经过简单的调研，发现构建TesseractOCR-GUI主要可以通过两种方式。一种就是对命令行的使用进行封装，另一种就是对TesseractOCR的C++ API进行封装。
 
-Encapsulating the use of the command line is simpler and currently meets my usage requirements, so only this method has been implemented for now. Pytesseract also seems to use this approach. The second method, which involves calling the Tesseract C++ API, might only be explored if the first method of encapsulating command line usage fails to meet the requirements.
+对命令行的使用进行封装比较简单，而且目前暂时也满足了我的使用需求，因此目前只实现了这种方式，pytesseract好像也是使用的这种方式。第二种调用Tesseract C++ API的方式，可能得等第一种对命令行的使用进行封装无法满足需求的时候，才会去探索了。
 
-Project structure:
+项目结构：
 
 ![image-20241207140458038](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20241207140458038.png)
 
-Development tool: Visual Studio 2022
+开发工具：Visual Studio 2022
 
-.NET version: .NET 8
+.NET版本：.NET 8
 
-Packages used: Prism + WPF UI
+使用的包：Prism + WPF UI
 
-Core code:
+核心代码：
 
 ```csharp
   private void ExecuteOCRCommand()
@@ -108,12 +108,12 @@ Core code:
   }
 ```
 
-## Finally
+## 最后
 
-This project can help people use TesseractOCR-GUI more easily and conveniently. For novice WPF/C# programmers, it can also serve as a simple practice project.
+本项目可以帮助人们更简单方便地使用TesseractOCR-GUI，对WPF/C#新手程序员，也可以当作一个简单的练手小项目。
 
-If it is helpful to you, giving it a star⭐ would be the greatest support!!
+如果对你有所帮助，点颗star⭐，就是最大的支持！！
 
-If you have any questions, feel free to contact me through my WeChat official account:
+还有任何问题，欢迎通过微信公众号与我联系：
 
 ![qrcode_for_gh_eb0908859e11_344](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/qrcode_for_gh_eb0908859e11_344.jpg)

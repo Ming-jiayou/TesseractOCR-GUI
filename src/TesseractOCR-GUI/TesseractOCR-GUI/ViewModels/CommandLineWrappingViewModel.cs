@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using Prism.Mvvm;
+using Prism.Commands;
 
 namespace TesseractOCR_GUI.ViewModels
 {
