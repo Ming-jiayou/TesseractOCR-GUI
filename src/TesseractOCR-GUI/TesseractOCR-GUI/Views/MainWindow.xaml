@@ -8,7 +8,9 @@
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors" 
         mc:Ignorable="d"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        xmlns:local="clr-namespace:TesseractOCR_GUI" xmlns:viewmodels="clr-namespace:TesseractOCR_GUI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
+        xmlns:local="clr-namespace:TesseractOCR_GUI" 
+        xmlns:viewmodels="clr-namespace:TesseractOCR_GUI.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         Title="{Binding Title}" Height="600" Width="1000">
     <Window.Resources>
         <Style TargetType="TextBlock">

@@ -110,6 +110,5 @@ namespace TesseractOCR_GUI.ViewModels
             // 等待进程退出
             process.WaitForExit();
         }
-
     }
 }

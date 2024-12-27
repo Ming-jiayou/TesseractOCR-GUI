@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using TesseractOCR_GUI.Views;
 using Prism.Ioc;
 using Prism.Unity;
+using TesseractOCR_GUI.Interop;
 
 namespace TesseractOCR_GUI
 {
@@ -24,6 +25,7 @@ namespace TesseractOCR_GUI
         {
             containerRegistry.RegisterForNavigation<CommandLineWrapping>();
             containerRegistry.RegisterForNavigation<APIWrapping>();
+            containerRegistry.Register<TesseractWrapper>();
         }
     }
 }
